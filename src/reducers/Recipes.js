@@ -3,7 +3,7 @@ import { FETCH_RECIPIES_REQUEST , FETCH_RECIPIES_SUCCESS, FETCH_RECIPIES_FAILURE
 
 const initialState = {
     loading: false,
-    users: [],
+    recipies: [],
     error: ''
 }
 
@@ -18,14 +18,14 @@ const recipiesReducers = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,
-                users: action.payload,
+                recipies: action.payload,
                 error: ''
             }
         case FETCH_RECIPIES_FAILURE:
             return {
                 ...state,
                 loading: false,
-                users: [],
+                recipies: [],
                 error: action.payload
             }
         default :
