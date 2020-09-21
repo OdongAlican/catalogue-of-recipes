@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css';
+import RecipeList from '../containers/RecipeList'
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>App Section</h1>
+    <div>
+      <RecipeList/>
     </div>
-  );
+  )
+
 }
 
-export default App;
+export default App
