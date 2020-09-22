@@ -4,7 +4,8 @@ import { FETCH_RECIPIES_REQUEST , FETCH_RECIPIES_SUCCESS, FETCH_RECIPIES_FAILURE
 const initialState = {
     loading: false,
     recipies: [],
-    error: ''
+    error: '',
+    filter: 'All'
 }
 
 const recipiesReducers = (state = initialState, action) => {
