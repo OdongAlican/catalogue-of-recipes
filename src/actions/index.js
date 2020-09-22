@@ -1,5 +1,10 @@
 import axios from "axios";
-import { FETCH_RECIPIES_REQUEST , FETCH_RECIPIES_SUCCESS, FETCH_RECIPIES_FAILURE } from '../actions/actionTypes'
+import { 
+    FETCH_RECIPIES_REQUEST , 
+    FETCH_RECIPIES_SUCCESS, 
+    FETCH_RECIPIES_FAILURE, 
+    FILTER_RECIPE 
+} from '../actions/actionTypes'
 
 
 export const fetchRecipiesRequest = () => {
@@ -22,10 +27,15 @@ export const fetchRecipiesFailure = error => {
     }
 }
 
+export const filterRecipe = userId => ({
+    type: FILTER_RECIPE,
+    payload: userId,
+  });
+
 export const fetchRecipies = () => {
     return (dispatch) => {
         dispatch(fetchRecipiesRequest)
-        axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+        axios.get('https://jsonplaceholder.typicode.com/posts').then(response => {
                 const recipies = response.data;
                 dispatch(fetchRecipiesSuccess(recipies))
             }).catch(error => {
