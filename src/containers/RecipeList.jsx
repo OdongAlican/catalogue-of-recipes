@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from "react-redux";
-import { fetchRecipies } from '../actions/index'
+import { fetchRecipies, filterRecipe } from '../actions/index'
 import Recipe from '../components/Recipe'
+import RecipeFilter from '../components/RecipeFilter'
 
-function RecipeList ( { recipiesData, fetchRecipiesData } ) {
+function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } ) {
 
     useEffect(()=>{
         fetchRecipiesData()
@@ -15,8 +16,13 @@ function RecipeList ( { recipiesData, fetchRecipiesData } ) {
         <h1>{ recipiesData.error} </h1>
       ) : (
         <div>
+          <RecipeFilter filterRecipe = { filterRecipe }/>
           {
-            recipiesData.recipies.map( (recipe, key) => (
+            recipiesData.recipies
+            .filter(recipe => {
+              return filter === 'All' ? true : (recipe.userId).toString() === filter}
+              )
+            .map( (recipe, key) => (
                 <Recipe recipe = {recipe} key = { key }/>
             ))
           }
@@ -27,11 +33,13 @@ function RecipeList ( { recipiesData, fetchRecipiesData } ) {
 
 
 const mapStateToProps = state =>({
-    recipiesData: state.recipies
+    recipiesData: state.recipies,
+    filter: state.filter
   })
   
   const mapDispatchToProps = dispatch => ({
-    fetchRecipiesData: () => dispatch(fetchRecipies())
+    fetchRecipiesData: () => dispatch(fetchRecipies()),
+    filterRecipe: userId => dispatch(filterRecipe(userId))
   })
   
   export default connect(mapStateToProps,mapDispatchToProps)(RecipeList);
