@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 function RecipeFilter ({ recipiesData, filterRecipe }){
     const handleFilter = ({ target }) => {
@@ -22,8 +21,4 @@ function RecipeFilter ({ recipiesData, filterRecipe }){
     )
 }
 
-const mapStateToProps = state =>({
-    recipiesData: state.recipies
-  })
-
-  export default connect(mapStateToProps)(RecipeFilter)
+  export default RecipeFilter

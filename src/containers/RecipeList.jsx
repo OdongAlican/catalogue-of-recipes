@@ -7,16 +7,17 @@ import RecipeFilter from '../components/RecipeFilter'
 function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } ) {
 
     useEffect(()=>{
+      
         fetchRecipiesData()
       }, [])
     
       return recipiesData.loading ?  (
           <h1>Loading</h1>
       ) : recipiesData.error ? (
-        <h1>{ recipiesData.error} </h1>
+        <h1>{ recipiesData.error } </h1>
       ) : (
         <div>
-          <RecipeFilter filterRecipe = { filterRecipe }/>
+          <RecipeFilter filterRecipe = { filterRecipe } recipiesData = { recipiesData } />
           {
             recipiesData.recipies
             .filter(recipe => {
@@ -30,7 +31,6 @@ function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } 
       )
 
 }
-
 
 const mapStateToProps = state =>({
     recipiesData: state.recipies,
