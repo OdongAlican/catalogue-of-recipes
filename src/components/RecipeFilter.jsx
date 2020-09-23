@@ -1,6 +1,15 @@
 import React from 'react'
 
 function RecipeFilter ({ recipiesData, filterRecipe }){
+
+    let userIdArry = []
+
+    recipiesData.recipies.map(value => {
+        userIdArry.push(value.symbol)
+    })    
+
+    let filteredArry = Array.from(new Set(userIdArry))
+
     const handleFilter = ({ target }) => {
         filterRecipe(target.value)
     }
@@ -12,8 +21,8 @@ function RecipeFilter ({ recipiesData, filterRecipe }){
                     All
                 </option>
                 {
-                    recipiesData.recipies.map( recipe => (
-                        <option key={ recipe.id } value = { recipe.userId }> { recipe.userId } </option>
+                    filteredArry.map( recipe => (
+                        <option key={ recipe } value = { recipe }> { recipe } </option>
                     ))
                 }
             </select>
