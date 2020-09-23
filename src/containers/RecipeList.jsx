@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchRecipies, filterRecipe } from '../actions/index'
 import Recipe from '../components/Recipe'
 import RecipeFilter from '../components/RecipeFilter'
+import NavBar from '../components/NavBar'
 
 function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } ) {
 
@@ -16,18 +17,24 @@ function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } 
       ) : recipiesData.error ? (
         <h1>{ recipiesData.error } </h1>
       ) : (
-        <div className="col-md-12 d-flex row">
-          <RecipeFilter filterRecipe = { filterRecipe } recipiesData = { recipiesData } />
-          {
-            recipiesData.recipies
-            .filter(recipe => {
-              return filter === 'All' ? true : recipe.symbol === filter}
-              )
-            .map( (recipe, key) => (
-                <Recipe recipe = {recipe} key = { key }/>
-            ))
-          }
+        <div>
+          <NavBar/> 
+          <div className="col-md-12 general-section">
+              <RecipeFilter filterRecipe = { filterRecipe } recipiesData = { recipiesData } />
+            <div className="col-md-12 d-flex row">
+              {
+                recipiesData.recipies
+                .filter(recipe => {
+                  return filter === 'All' ? true : recipe.symbol === filter}
+                  )
+                .map( (recipe, key) => (
+                    <Recipe recipe = {recipe} key = { key }/>
+                ))
+              }
+            </div>
+          </div>
         </div>
+
       )
 
 }
