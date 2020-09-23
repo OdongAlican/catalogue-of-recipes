@@ -1,10 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Built with
 
