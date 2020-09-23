@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function Recipe({ recipe }){
     return (
-        <div className="col-md-3 ">
+        <div data-testid="recipe" className="col-md-3 ">
             <div className="card col-md-12 mx-2 mb-2 p-4" >
                 <div  className="image-section mx-auto mb-2">
                     <img src={recipe.image} alt="boohoo" className="image-det"/>

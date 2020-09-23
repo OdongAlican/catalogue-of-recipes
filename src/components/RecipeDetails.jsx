@@ -8,7 +8,7 @@ const RecipeDetails = (props) => {
     const dateArray = recipeData.publishedDate.split(' ')
     const dateValue = new Date(dateArray[0])
 return (
-    <div>
+    <div data-testid="recipeDetails">
         <div className="card p-2 col-6 border mx-auto mt-3 border" >
         <div  className="image-section-details mx-auto mb-2 border p-2">
             <img src={recipeData.image} alt="boohoo" className="image-detail"/>
