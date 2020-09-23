@@ -11,15 +11,15 @@ return (
     <div>
         <div className="card p-2 col-6 border mx-auto mt-3 border" >
         <div  className="image-section-details mx-auto mb-2 border p-2">
-                    <img src={recipeData.image} alt="boohoo" className="image-detail"/>
-                </div>
+            <img src={recipeData.image} alt="boohoo" className="image-detail"/>
+        </div>
             <div className="card-body card-section">
                 <h5 className="card-title text-underline"> {recipeData.title} </h5>
                 <p className="card-text text-secondary">{ recipeData.text }</p>
                 <p className="card-text text-underline"> Published Date: {
                 dateValue.toDateString()} </p>
                 <p className="card-text text-underline"> Web-site:                     
-                <a href={recipeData.site} target = '_blank' className="ml-1">  {recipeData.site}</a>
+                <a href={recipeData.site} target = '_blank' className="ml-1" rel="noopener noreferrer"> {recipeData.site}</a>
                 </p>
             </div>
             <button className="col-md-2 btn btn-primary">
@@ -28,7 +28,7 @@ return (
                 </Link>
             </button>
         </div>
-</div>
+    </div>
 )
 
 }
