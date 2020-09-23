@@ -1,17 +1,21 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import {  filterRecipe } from '../actions/index'
+import PropTypes from 'prop-types'
 
-function RecipeFilter ({ recipiesData, filterRecipe }){
+function RecipeFilter ({ recipiesData }){
 
     let userIdArry = []
+    const dispatch = useDispatch()
 
     recipiesData.recipies.map(value => {
-        userIdArry.push(value.symbol)
+       return userIdArry.push(value.symbol)
     })    
 
     let filteredArry = Array.from(new Set(userIdArry))
 
     const handleFilter = ({ target }) => {
-        filterRecipe(target.value)
+        dispatch(filterRecipe(target.value))
     }
 
     return (
@@ -31,4 +35,8 @@ function RecipeFilter ({ recipiesData, filterRecipe }){
     )
 }
 
-  export default RecipeFilter
+RecipeFilter.propTypes = {
+    recipiesData: PropTypes.object.isRequired
+}
+
+export default RecipeFilter
