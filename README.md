@@ -17,7 +17,7 @@
 - [Live Link](https://online-str-app.herokuapp.com/)
 
 ## Video Description Link
-- [Video](https://www.loom.com/share/ef3265d16d894b5286d7435c6b9492e6)
+- [Video](https://www.loom.com/share/a1184b5f407145d29fb7535cfc586acd)
 
 ## App Images
 ![First Image](public/home.png)
