@@ -1,15 +1,13 @@
 import React from 'react';
 import '../App.css';
-import RecipeList from '../containers/RecipeList'
+import RecipeList from '../containers/RecipeList';
 
 function App() {
-
   return (
     <div>
-      <RecipeList/>
+      <RecipeList />
     </div>
-  )
-
+  );
 }
 
-export default App
+export default App;
