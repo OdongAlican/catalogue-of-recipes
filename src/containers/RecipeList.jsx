@@ -16,12 +16,12 @@ function RecipeList ( { recipiesData, fetchRecipiesData, filterRecipe, filter } 
       ) : recipiesData.error ? (
         <h1>{ recipiesData.error } </h1>
       ) : (
-        <div>
+        <div className="col-md-12 d-flex row">
           <RecipeFilter filterRecipe = { filterRecipe } recipiesData = { recipiesData } />
           {
             recipiesData.recipies
             .filter(recipe => {
-              return filter === 'All' ? true : (recipe.userId).toString() === filter}
+              return filter === 'All' ? true : recipe.symbol === filter}
               )
             .map( (recipe, key) => (
                 <Recipe recipe = {recipe} key = { key }/>
