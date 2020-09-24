@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches recipe snapshot 1`] = `
+<div
+  className="col-md-3 "
+  data-testid="recipe"
+>
+  <div
+    className="card col-md-12 mx-2 mb-2 p-4"
+  >
+    <div
+      className="image-section mx-auto mb-2"
+    >
+      <img
+        alt="boohoo"
+        className="image-det"
+        src="sample"
+      />
+    </div>
+    <div>
+      <h5
+        className="text-secondary font-weight-bold"
+      >
+        title
+      </h5>
+    </div>
+    <p
+      className="symbol-paragraph"
+    >
+       company: 
+      <b>
+        <i />
+      </b>
+    </p>
+    <label
+      className="display-6 visit-us"
+      htmlFor="site"
+    >
+      Visit Us:
+      <a
+        className="ml-1"
+        href="site"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        site
+      </a>
+    </label>
+    <button
+      className="btn btn-primary mb-1"
+    >
+      <a
+        className="text-white"
+        href="/recipe/title"
+        onClick={[Function]}
+      >
+        View Details
+      </a>
+    </button>
+  </div>
+</div>
+`;

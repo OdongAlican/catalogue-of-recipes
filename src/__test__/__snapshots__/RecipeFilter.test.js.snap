@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches RecipeFilter snapshot 1`] = `
+<div
+  className="bg-secondary my-2 p-2 d-flex justify-content-center align-items-center"
+  data-testid="recipeFilter"
+>
+  <label
+    className=" text-white mr-1 mt-1 font-weight-bold"
+    htmlFor="filter"
+  >
+    SELECT COMPANY:
+  </label>
+  <select
+    className="form-control col-md-3 p-1"
+    onChange={[Function]}
+  >
+    <option
+      value="All"
+    >
+      All
+    </option>
+    <option>
+       
+       
+    </option>
+  </select>
+</div>
+`;

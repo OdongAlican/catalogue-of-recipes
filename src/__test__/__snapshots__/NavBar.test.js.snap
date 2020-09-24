@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches navbar snapshot 1`] = `
+<div
+  className="bg-secondary d-flex justify-content-center align-items-center p-4 text-white nav-bar-section"
+  data-testid="navbar"
+>
+  <h4>
+    Stay Online
+  </h4>
+</div>
+`;
