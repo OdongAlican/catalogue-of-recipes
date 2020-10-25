@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/catalogue-of-recipes/static/css/main.c9af426b.chunk.css",
+    "main.js": "/catalogue-of-recipes/static/js/main.3440931f.chunk.js",
+    "main.js.map": "/catalogue-of-recipes/static/js/main.3440931f.chunk.js.map",
+    "runtime-main.js": "/catalogue-of-recipes/static/js/runtime-main.b9782b9c.js",
+    "runtime-main.js.map": "/catalogue-of-recipes/static/js/runtime-main.b9782b9c.js.map",
+    "static/css/2.8aa5a7f8.chunk.css": "/catalogue-of-recipes/static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.905d1fad.chunk.js": "/catalogue-of-recipes/static/js/2.905d1fad.chunk.js",
+    "static/js/2.905d1fad.chunk.js.map": "/catalogue-of-recipes/static/js/2.905d1fad.chunk.js.map",
+    "index.html": "/catalogue-of-recipes/index.html",
+    "precache-manifest.0401743a0c29faaac8a85bc72dcf8b84.js": "/catalogue-of-recipes/precache-manifest.0401743a0c29faaac8a85bc72dcf8b84.js",
+    "service-worker.js": "/catalogue-of-recipes/service-worker.js",
+    "static/css/2.8aa5a7f8.chunk.css.map": "/catalogue-of-recipes/static/css/2.8aa5a7f8.chunk.css.map",
+    "static/css/main.c9af426b.chunk.css.map": "/catalogue-of-recipes/static/css/main.c9af426b.chunk.css.map",
+    "static/js/2.905d1fad.chunk.js.LICENSE.txt": "/catalogue-of-recipes/static/js/2.905d1fad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9782b9c.js",
+    "static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.905d1fad.chunk.js",
+    "static/css/main.c9af426b.chunk.css",
+    "static/js/main.3440931f.chunk.js"
+  ]
+}
